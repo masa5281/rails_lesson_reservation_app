@@ -1,0 +1,56 @@
+@import '~bootstrap/scss/bootstrap';
+@import 'reset.scss';
+
+// 変数
+$gray: rgb(180, 180, 180);
+
+// 共通
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// ヘッダー
+.header {
+  height: 70px;
+  background-color: mediumorchid;
+  .nav {
+  }
+}
+
+// 新規ユーザー登録画面、ログイン画面
+.registration-content {
+  box-shadow: 0 0 2px $gray;
+  max-width: 600px;
+  margin: 100px auto 0 auto;
+  padding: 30px 0;
+    .registation-center {
+      text-align: center;
+      .registration-form {
+        margin-bottom: 15px;
+        table {
+          margin: auto;
+          text-align: left;
+          margin-top: 15px;
+          margin-bottom: 15px;
+          tbody {
+            tr {
+              th {
+                vertical-align: middle;
+                margin-right: 10px;
+                margin-top: 15px;
+              }
+              td {
+                padding: 5px;
+                width: 300px;
+              }
+            }
+          }
+        }
+        .btn {
+          width: 330px;
+        }
+      }
+    }
+}

@@ -1,0 +1,35 @@
+<div class='container'> 
+    <div class='registration-content'>
+      <div class="registation-center">
+        <div class="registration-title">
+          <h3>新しいアカウントを作成</h3>
+        </div>
+        <div class="registration-form">
+          <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
+            <table>
+              <tbody>
+                <tr>
+                  <th class='badge badge-danger'>必須</th>
+                  <td><%= f.text_field :name, class: 'form-control', placeholder: 'ユーザー名' %></td>
+                </tr>
+                <tr>
+                  <th class='badge badge-danger'>必須</th>
+                  <td><%= f.email_field :email, class: 'form-control', placeholder: 'メールアドレス' %></td>
+                </tr>
+                <tr>
+                  <th class='badge badge-danger'>必須</th>
+                  <td><%= f.password_field :password, class: 'form-control', placeholder: 'パスワード' %></td>
+                </tr>
+                <tr>
+                  <th class='badge badge-danger'>必須</th>
+                  <td><%= f.password_field :password_confirmation, class: 'form-control', placeholder: 'パスワード確認' %></td>
+                </tr>
+              </tbody>
+            </table>
+            <%= f.submit "新しいアカウントを作成", class: 'btn btn-primary' %>
+          <% end %>
+        </div>
+        <%= link_to 'すでにアカウントをお持ちの方はログイン', new_user_session_path %>
+      </div>
+    </div>
+</div>
